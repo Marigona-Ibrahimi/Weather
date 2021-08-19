@@ -1,7 +1,7 @@
 import './App.css';
 import Weather from './components/weather.component.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "weather-icons/css/weather-icons.css";
+import 'weather-icons/css/weather-icons.css';
 import React from 'react';
 import Form from './components/form.component.jsx';
 
@@ -82,7 +82,7 @@ class App extends React.Component{
       console.log(response);
 
       this.setState({
-        city: `${response.name},${response.sys.country}`,
+        city: `${response.name}, ${response.sys.country}`,
         celsius: this.calCelsius(response.main.temp),
         temp_max: this.calCelsius(response.main.temp_max),
         temp_min: this.calCelsius(response.main.temp_min),
@@ -107,7 +107,7 @@ class App extends React.Component{
         temp_max={this.state.temp_max}
         temp_min={this.state.temp_min}
         description={this.state.description}
-        weatherIcon={this.state.weatherIcon}
+        weatherIcon={this.state.icon}
         />
       </div>
     )
